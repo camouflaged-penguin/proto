@@ -6,6 +6,7 @@ class SceneMain extends Phaser.Scene {
   {
     //load images or sounds
     //this.load.image("key","path")
+    this.load.image('sky', 'assets/sky.png');
     this.load.image('background', 'assets/background.png');
     this.load.image('banana', 'assets/banana.png')
     this.load.image('basket', 'assets/basket.png')
@@ -18,7 +19,8 @@ class SceneMain extends Phaser.Scene {
   }
   create() {
     console.log("message");
-      this.background = this.add.image(400, 300, 'background');
+      this.sky = this.add.image(400, 300, 'sky');
+    //  this.background = this.add.image(400, 300, 'background');
     //  this.banana = this.add.image(200, 250, 'banana');
       this.basket = this.add.image(200, 250, 'basket')
   }
