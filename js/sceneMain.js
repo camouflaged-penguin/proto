@@ -18,7 +18,7 @@ class SceneMain extends Phaser.Scene {
   create() {
     console.log("message");
       this.sky = this.add.image(400, 300, 'sky');
-      this.banana = this.add.image(403,481, 'banana');
+      this.banana = this.add.image(200,250, 'banana');
   }
   update() {
     // everything that is constantly checked
