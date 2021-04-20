@@ -6,6 +6,7 @@ class SceneMain extends Phaser.Scene {
   {
     //load images or sounds
     //this.load.image("key","path")
+    this.load.image('banana', 'assets/banana.png')
     this.load.image('sky', 'assets/sky.png');
     this.load.image('ground', 'assets/platform.png');
     this.load.image('star', 'assets/star.png');
@@ -17,6 +18,7 @@ class SceneMain extends Phaser.Scene {
   create() {
     console.log("message");
       this.sky = this.add.image(400, 300, 'sky');
+      this.banana = this.add.image(403,481, 'banana');
   }
   update() {
     // everything that is constantly checked
