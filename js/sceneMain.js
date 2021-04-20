@@ -22,5 +22,6 @@ class SceneMain extends Phaser.Scene {
   }
   update() {
     // everything that is constantly checked
+    //kommentar hier
   }
 }
