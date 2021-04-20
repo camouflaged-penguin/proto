@@ -23,6 +23,8 @@ class SceneMain extends Phaser.Scene {
     //  this.background = this.add.image(400, 300, 'background');
     //  this.banana = this.add.image(200, 250, 'banana');
       this.basket = this.add.image(200, 250, 'basket')
+      this.basket.displayWidth=239;
+      this.basket.displayHeigth=217;
   }
   update() {
     // everything that is constantly checked
