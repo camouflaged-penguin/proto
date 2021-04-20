@@ -22,9 +22,9 @@ class SceneMain extends Phaser.Scene {
       this.sky = this.add.image(400, 300, 'sky');
     //  this.background = this.add.image(400, 300, 'background');
     //  this.banana = this.add.image(200, 250, 'banana');
-      this.basket = this.add.image(200, 250, 'basket')
-      this.basket.displayWidth=239;
-      this.basket.displayHeigth=217;
+      this.basket = this.add.image(200, 250, 'basket');
+      this.basket.scaleX=.5;
+      this.basket.scaleY=.5;
   }
   update() {
     // everything that is constantly checked
