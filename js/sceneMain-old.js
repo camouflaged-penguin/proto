@@ -7,7 +7,7 @@ class SceneMain extends Phaser.Scene {
     //load images or sounds
     //this.load.image("key","path")
     this.load.image('sky', 'assets/sky.png');
-    this.load.image('background', 'assets/background.png');
+    this.load.image('background', 'assets/background.jpg');
     this.load.image('banana', 'assets/banana.png')
     this.load.image('basket', 'assets/basket.png')
     this.load.image('ground', 'assets/platform.png');
@@ -22,11 +22,11 @@ class SceneMain extends Phaser.Scene {
       this.sky = this.add.image(400, 300, 'sky');
     //  this.background = this.add.image(400, 300, 'background');
     //  this.banana = this.add.image(200, 250, 'banana');
-      var image = this.add.image(200, 250, 'basket').setInteractive();
-      this.input.scaleX=.5;
-      this.input.scaleY=.5;
+      this.basket = this.add.image(200, 250, 'basket').setInteractive();
+      this.basket.scaleX=.5;
+      this.basket.scaleY=.5;
 
-      this.input.setDraggable(image);
+      this.input.setDraggable(this.basket);
 
       //  The pointer has to move 16 pixels before it's considered as a drag
       this.input.dragDistanceThreshold = 16;
