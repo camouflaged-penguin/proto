@@ -18,23 +18,28 @@ class SceneMain extends Phaser.Scene {
      { frameWidth: 32, frameHeight: 48 });
   }
   create() {
-      console.log("message");
       this.background = this.add.image(0, 0, 'background');
       this.background.setOrigin(0,0);
+
+      var bananaGroup = this.physics.add.group({
+        key: 'banana',
+      /*  repeat: 1, */
+        setXY: { x: (Phaser.Math.Between(150, 800)), y: 0, stepX: 70 }
+      });
+
     //  this.background = this.add.image(400, 300, 'background');
     //  this.banana = this.add.image(200, 250, 'banana');
       this.basket = this.add.image(200, 650, 'basket').setInteractive();
       this.basket.scaleX=.5;
       this.basket.scaleY=.5;
-
       this.input.setDraggable(this.basket);
 
       //  The pointer has to move 16 pixels before it's considered as a drag
       this.input.dragDistanceThreshold = 16;
-
       this.input.on('dragstart', function (pointer, gameObject) {
 
          //gameObject.setTint(0xff0000);
+         gameObject.alpha=.5;
 
      });
 
@@ -48,6 +53,7 @@ class SceneMain extends Phaser.Scene {
       this.input.on('dragend', function (pointer, gameObject) {
 
          //gameObject.clearTint();
+         gameObject.alpha=1;
 
      });
 
